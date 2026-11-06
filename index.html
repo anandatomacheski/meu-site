@@ -1,0 +1,519 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ananda & Emili | Portfólio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --rosa: #d77ba7;
+    --rosa-claro: #fceaf2;
+    --roxo: #a88ac7;
+    --texto: #493847;
+    --branco: #ffffff;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: #fffafd;
+    color: var(--texto);
+}
+
+/* MENU */
+
+header {
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffffee;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 3px 15px #00000008;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    color: var(--rosa);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--texto);
+    font-size: 14px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: var(--rosa);
+}
+
+/* INÍCIO */
+
+#inicio {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px 50px;
+    background:
+    radial-gradient(circle at 20% 30%, #f7d7e9, transparent 35%),
+    radial-gradient(circle at 80% 70%, #e9dcfa, transparent 35%),
+    #fffafd;
+}
+
+.conteudo-inicio {
+    max-width: 750px;
+    animation: aparecer 1.2s ease;
+}
+
+.subtitulo {
+    color: var(--roxo);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+#inicio h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 9vw, 90px);
+    color: var(--rosa);
+    line-height: 1.1;
+}
+
+#inicio h2 {
+    font-size: 21px;
+    font-weight: 400;
+    margin: 25px 0 15px;
+}
+
+#inicio p {
+    color: #806d7b;
+    line-height: 1.8;
+    max-width: 570px;
+    margin: auto;
+}
+
+.botao {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 32px;
+    border-radius: 40px;
+    background: var(--rosa);
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.botao:hover {
+    background: var(--roxo);
+    transform: translateY(-4px);
+}
+
+/* SEÇÕES */
+
+section:not(#inicio) {
+    padding: 100px 9%;
+}
+
+.titulo {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: var(--rosa);
+    margin-bottom: 20px;
+}
+
+.descricao {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 50px;
+    color: #806d7b;
+    line-height: 1.9;
+}
+
+/* SOBRE */
+
+#sobre {
+    background: white;
+}
+
+.sobre-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.sobre-box {
+    padding: 35px;
+    border-radius: 25px;
+    background: #fff5fa;
+    border: 1px solid #f4dce9;
+}
+
+.sobre-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    color: var(--rosa);
+    margin-bottom: 15px;
+}
+
+.sobre-box p {
+    color: #806d7b;
+    line-height: 1.9;
+}
+
+/* HABILIDADES */
+
+#habilidades {
+    background: #fffafd;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 35px 25px;
+    text-align: center;
+    border-radius: 22px;
+    box-shadow: 0 8px 25px #d77ba715;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card span {
+    font-size: 40px;
+}
+
+.card h3 {
+    margin: 15px 0;
+    color: var(--rosa);
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #806d7b;
+}
+
+/* PROJETOS */
+
+#projetos {
+    background: #fceef5;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.projeto {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.projeto:hover {
+    transform: translateY(-7px);
+}
+
+.projeto img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.projeto h3 {
+    padding: 20px;
+    color: var(--rosa);
+    font-family: 'Playfair Display', serif;
+}
+
+/* CONTATO */
+
+#contato {
+    background: white;
+    text-align: center;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.redes a {
+    padding: 13px 25px;
+    background: var(--rosa-claro);
+    border-radius: 30px;
+    color: #a34f7c;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.redes a:hover {
+    background: var(--rosa);
+    color: white;
+}
+
+/* RODAPÉ */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #f7e2ed;
+    color: #98647f;
+    font-size: 13px;
+}
+
+/* ANIMAÇÃO */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CELULAR */
+
+@media(max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    nav {
+        gap: 13px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .sobre-container {
+        grid-template-columns: 1fr;
+    }
+
+    section:not(#inicio) {
+        padding: 70px 6%;
+    }
+
+    .titulo {
+        font-size: 34px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Ananda & Emili ♡</div>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+    </nav>
+</header>
+
+<!-- INÍCIO -->
+
+<section id="inicio">
+    <div class="conteudo-inicio">
+
+        <div class="subtitulo">Nosso espaço criativo</div>
+
+        <h1>Ananda & Emili</h1>
+
+        <h2>Bem-vindos ao nosso portfólio!</h2>
+
+        <p>
+            Criatividade, personalidade e sonhos em um só lugar.
+            Conheça nossa história, nossas habilidades e
+            nossos projetos.
+        </p>
+
+        <a href="#sobre" class="botao">
+            Conheça nosso trabalho ♡
+        </a>
+
+    </div>
+</section>
+
+<!-- SOBRE -->
+
+<section id="sobre">
+
+    <h2 class="titulo">Quem somos?</h2>
+
+    <p class="descricao">
+        Duas pessoas, muitas ideias e uma vontade enorme
+        de criar coisas incríveis!
+    </p>
+
+    <div class="sobre-container">
+
+        <div class="sobre-box">
+            <h3>♡ Ananda</h3>
+            <p>
+                Um pouquinho sobre Ananda: aqui você pode
+                colocar sua personalidade, seus gostos,
+                sonhos, experiências e objetivos.
+            </p>
+        </div>
+
+        <div class="sobre-box">
+            <h3>♡ Emili</h3>
+            <p>
+                Um pouquinho sobre Emili: aqui você pode
+                apresentar suas características, talentos,
+                interesses e tudo aquilo que faz você ser única.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- HABILIDADES -->
+
+<section id="habilidades">
+
+    <h2 class="titulo">Nossas habilidades</h2>
+
+    <p class="descricao">
+        Algumas das coisas que gostamos de fazer e desenvolver.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <span>🎨</span>
+            <h3>Criatividade</h3>
+            <p>Transformando ideias em projetos especiais.</p>
+        </div>
+
+        <div class="card">
+            <span>💻</span>
+            <h3>Tecnologia</h3>
+            <p>Aprendendo e explorando o mundo digital.</p>
+        </div>
+
+        <div class="card">
+            <span>✨</span>
+            <h3>Inovação</h3>
+            <p>Buscando novas possibilidades e inspirações.</p>
+        </div>
+
+        <div class="card">
+            <span>💗</span>
+            <h3>Dedicação</h3>
+            <p>Colocando carinho em tudo o que fazemos.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- PROJETOS -->
+
+<section id="projetos">
+
+    <h2 class="titulo">Nossos projetos</h2>
+
+    <p class="descricao">
+        Um espaço para apresentar nossas criações e trabalhos.
+    </p>
+
+    <div class="galeria">
+
+        <div class="projeto">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=700" alt="Computador e programação">
+            <h3>Projeto 01</h3>
+        </div>
+
+        <div class="projeto">
+            <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=700" alt="Materiais de arte">
+            <h3>Projeto 02</h3>
+        </div>
+
+        <div class="projeto">
+            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=700" alt="Caderno e escrita">
+            <h3>Projeto 03</h3>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTATO -->
+
+<section id="contato">
+
+    <h2 class="titulo">Vamos conversar?</h2>
+
+    <p class="descricao">
+        Obrigada por visitar nosso portfólio!
+        Entre em contato conosco.
+    </p>
+
+    <div class="redes">
+        <a href="mailto:contato@exemplo.com">✉ E-mail</a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">♡ Instagram</a>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Ananda & Emili | Todos os direitos reservados ♡</p>
+    <p>Feito com carinho 💗</p>
+</footer>
+
+</body>
+</html>
